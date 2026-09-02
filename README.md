@@ -1,22 +1,28 @@
+
 # ⚡ PowerGrid Energy Analytics & Electrical Operations Dashboard
 
-An end-to-end electrical energy analytics project combining **Python, SQL, MATLAB and Power BI** to analyze energy consumption, electrical operating parameters, peak demand and abnormal power events across multiple meters.
+An end-to-end electrical energy analytics project combining **Python, SQL, MATLAB and Power BI** to analyze energy consumption, electrical operating parameters, peak demand, meter performance and abnormal power events.
 
 ---
 
-## 📊 Project Overview
+## 📌 Project Overview
 
-This project analyzes **86,400 electrical measurements across 10 meters** and converts raw electrical measurements into actionable energy and grid-operation insights.
+This project analyzes **86,400 electrical measurements across 10 meters** and transforms raw electrical measurements into useful energy and grid-operation insights.
 
-The project combines:
+The project combines electrical engineering analysis with data analytics and business intelligence.
 
-- Python-based data generation and analytics
-- SQL-based energy and meter analysis
-- MATLAB-based electrical engineering calculations
-- Power BI-based interactive visualization
-- Anomaly detection for high-power events
+### Project Components
 
-### Key Results
+- 🐍 **Python** — Data generation, preprocessing, statistical analysis and anomaly detection
+- 🗄️ **SQL / SQLite** — Energy, meter and peak-demand analytics
+- ⚡ **MATLAB** — Electrical power calculations and validation
+- 📊 **Power BI** — Interactive dashboard and visualization
+- 🌐 **Python API** — Project data access through an API
+- 🔧 **Git & GitHub** — Version control and project documentation
+
+---
+
+## 📊 Key Results
 
 | Metric | Result |
 |---|---:|
@@ -31,107 +37,100 @@ The project combines:
 
 ---
 
-# 🏗️ Project Architecture
+## 🏗️ Project Architecture
 
 ```text
-Raw Electrical Data
-        │
-        ▼
-     Python
-  Data Generation
-  Data Analysis
-        │
-        ├───────────────┐
-        ▼               ▼
-      SQL            MATLAB
-   Analytics       Electrical
-   & Queries       Calculations
-        │               │
-        └───────┬───────┘
-                ▼
-            Power BI
-        Interactive Dashboard
-                │
-                ▼
-      Grid & Operational Insights
+                 ELECTRICAL MEASUREMENT DATA
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │   PYTHON    │
+                    │             │
+                    │ Data        │
+                    │ Generation  │
+                    │ Analysis    │
+                    │ Anomalies   │
+                    └──────┬──────┘
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │   SQLite    │
+                    │  Database   │
+                    └──────┬──────┘
+                           │
+                 ┌─────────┴─────────┐
+                 ▼                   ▼
+          ┌─────────────┐     ┌─────────────┐
+          │     SQL     │     │   MATLAB    │
+          │  Analytics  │     │ Electrical  │
+          │             │     │ Calculations│
+          └──────┬──────┘     └──────┬──────┘
+                 │                   │
+                 └─────────┬─────────┘
+                           ▼
+                    ┌─────────────┐
+                    │  POWER BI   │
+                    │  Dashboard  │
+                    └──────┬──────┘
+                           │
+                           ▼
+                 GRID & OPERATIONAL
+                       INSIGHTS
+---
 
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Data generation, processing, analytics and anomaly detection |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical calculations |
+| SQL | Energy and meter-level analytics |
+| SQLite | Local analytical database |
+| MATLAB | Electrical calculations and validation |
+| Power BI | Interactive dashboard and visualization |
+| DAX | Power BI measures and calculations |
+| Git | Version control |
+| GitHub | Project hosting and documentation |
 
 ---
 
-## 📊 Power BI Dashboard
+# 🚀 How to Run
 
-The Power BI dashboard provides interactive analysis of electrical energy consumption, operating parameters, meter performance, peak demand, load factor, power factor, and abnormal power events.
+## Python
 
-### Executive Energy Overview
+Create a virtual environment:
 
-![Executive Energy Overview](screenshots/executive_overview.png)
+```bash
+python -m venv venv
+Activate it on Windows:
+venv\Scripts\activate
 
-### Electrical Operations
+Install the required packages:
+pip install pandas numpy
+Run the main analysis:
+python python/analysis.py
+Run SQL analytics:
+python python/sql_analysis.py
 
-![Electrical Operations](screenshots/electrical_operations.png)
+MATLAB
 
-### Anomaly & Power Quality
+Open the following file in MATLAB:matlab/electrical_analysis.m
+Run the script to perform the electrical calculations and generate the analysis results.
 
-![Anomaly & Power Quality](screenshots/anomaly_power_quality.png)
+Power BI
 
-### Grid Insights & Recommendations
+Open:dashboard/PowerGrid_Energy_Analytics_Dashboard.pbix
+The dashboard provides interactive exploration of the electrical and energy analytics.
 
-![Grid Insights](screenshots/grid_insights.png)
+The electrical dataset used in this project is a synthetically generated dataset designed for analytical and educational purposes.
 
----
+The dataset was constructed with relationships between voltage, current, power factor and electrical power so that the resulting calculations could be validated using electrical engineering equations.
 
-## ⚡ MATLAB Electrical Analysis
+It does not represent confidential operational data from an actual utility, substation or power-grid operator.
 
-MATLAB was used to perform electrical engineering calculations and validate the operating characteristics of the monitored electrical system.
+.
 
-The analysis includes:
+🎯 Project Objective
 
-- Average voltage
-- Average current
-- Average real power
-- Apparent power
-- Reactive power
-- Power factor
-- Maximum current
-- Peak load
-- Load factor
-- Electrical calculation validation
-
-### MATLAB Results
-
-![MATLAB Results](screenshots/matlab_results.png)
-
-### 24-Hour Load Profile
-
-![Load Profile](screenshots/load_profile.png)
-
-### Hourly Power Factor
-
-![Power Factor Profile](screenshots/power_factor_profile.png)
-
-### Hourly Reactive Power
-
-![Reactive Power Profile](screenshots/reactive_power_profile.png)
-
-### Hourly Current
-
-![Current Profile](screenshots/current_profile.png)
-
----
-
-## 🔄 Project Workflow
-
-```text
-Electrical Measurement Data
-          ↓
-   Python Data Analysis
-          ↓
-      SQLite Database
-          ↓
-      SQL Analysis
-          ↓
- MATLAB Electrical Analysis
-          ↓
-     Power BI Dashboard
-          ↓
- Energy & Grid Insights
+The objective of this project is to demonstrate how electrical engineering principles and data analytics can be combined to analyze electrical operating conditions, identify abnormal power events and present actionable insights through an interactive business-intelligence dashboard.
